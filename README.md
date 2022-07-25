@@ -1,6 +1,6 @@
 # ./
 
-This template should help get you started developing with Vue 3 in Vite.
+![Build](https://github.com/lvdat/lvdat.github.io-vue/actions/workflows/node.js.yml/badge.svg)
 
 ## Recommended IDE Setup
 
