@@ -61,7 +61,7 @@ export default {
           id: 7,
           name: "Riot API OC1",
           status: "OK",
-        }
+        },
       ],
       className(id) {
         return this.api[id - 1].status == "OK"

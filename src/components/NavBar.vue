@@ -26,9 +26,11 @@
               <i class="fab fa-youtube"></i> Youtube Tool
             </MDBDropdownToggle>
             <MDBDropdownMenu aria-labelledby="dropdownMenuButton">
-                <MDBDropdownItem href="#">
-                    <RouterLink to="/youtube/videodislike">Return video dislike</RouterLink>
-                </MDBDropdownItem>
+              <MDBDropdownItem href="#">
+                <RouterLink to="/youtube/videodislike"
+                  >Return video dislike</RouterLink
+                >
+              </MDBDropdownItem>
             </MDBDropdownMenu>
           </MDBDropdown>
         </MDBNavbarItem>
