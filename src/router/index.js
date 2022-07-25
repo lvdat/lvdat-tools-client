@@ -8,14 +8,31 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
+      meta: { title: "levandat Tech Solution" },
     },
     {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import("../views/AboutView.vue"),
+      path: "/minecraft/mcserverstatus",
+      name: "mcserverstatus",
+      component: () => import("../views/MCServerStatus.vue"),
+      meta: { title: "Minecraft Server Status" },
+    },
+    {
+      path: "/riot/loltool",
+      name: "loltool",
+      component: () => import("../views/LOLTool.vue"),
+      meta: { title: "League of Legends Tool" },
+    },
+    {
+      path: "/minecraft/rgbtextgenerator",
+      name: "rgbtextgenerator",
+      component: () => import("../views/RGBGenerator.vue"),
+      meta: { title: "RGB Text Generator" },
+    },
+    {
+      path: "/youtube/videodislike",
+      name: "videodislike",
+      component: () => import("../views/ReturnDislike.vue"),
+      meta: { title: "Get Video Dislike Count" },
     },
   ],
 });

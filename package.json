@@ -1,6 +1,6 @@
 {
   "name": "lvdat.github.io-vue",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "scripts": {
     "dev": "vite --host localhost --port 3000",
     "build": "vite build",
@@ -9,8 +9,10 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@oruga-ui/oruga-next": "^0.5.5",
+    "axios": "^0.27.2",
+    "mdb-vue-ui-kit": "^2.0.0",
     "vue": "^3.2.37",
+    "vue-axios": "^3.4.1",
     "vue-router": "^4.1.2"
   },
   "devDependencies": {
