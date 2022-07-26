@@ -42,7 +42,7 @@ export default {
   data() {
     return {
       YTBApiHost:
-        "http://levandat-cors-bypass.herokuapp.com/https://returnyoutubedislikeapi.com/",
+        "https://levandat-cors-bypass.herokuapp.com/https://returnyoutubedislikeapi.com/",
       infoVideo: "Chưa có thông tin",
       videoId: null,
     };
@@ -51,15 +51,26 @@ export default {
     return {};
   },
   methods: {
+    fetchFromUrl(url) {
+      return fetch(url)
+        .then((response) => response.json())
+        .then((data) => data);
+    },
     getInfoVideo(videoId) {
+      this.infoVideo = "Đang tải dữ liệu";
+      if (videoId === null) {
+        this.infoVideo = "Vui lòng nhập thông tin hợp lệ!";
+        return;
+      }
       const url = this.YTBApiHost + "votes?videoId=" + videoId;
+      console.log(this.fetchFromUrl(url));
       this.axios
         .get(url)
         .then((response) => {
           this.infoVideo = response.data;
         })
-        .error((error) => {
-          this.infoVideo = error;
+        .catch((error) => {
+          this.infoVideo = error.message;
         });
     },
   },
