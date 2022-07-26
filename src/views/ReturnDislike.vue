@@ -1,5 +1,5 @@
 <template>
-  <MDBCard border="primary">
+  <MDBCard border="primary" :style="{ marginBottom: '4px' }">
     <MDBCardBody :style="{ textAlign: 'center' }">
       Get realtime dislike count of Youtube video. Please enter video ID or
       Video link bellow:
@@ -30,7 +30,6 @@
 </template>
 
 <script>
-import { ref } from "vue";
 import { MDBCard, MDBCardBody, MDBInput, MDBBtn } from "mdb-vue-ui-kit";
 
 export default {
@@ -42,16 +41,14 @@ export default {
   },
   data() {
     return {
-      YTBApiHost: "http://levandat-cors-bypass.herokuapp.com/https://returnyoutubedislikeapi.com/",
+      YTBApiHost:
+        "http://levandat-cors-bypass.herokuapp.com/https://returnyoutubedislikeapi.com/",
       infoVideo: "Chưa có thông tin",
       videoId: null,
     };
   },
   setup() {
-    const input24 = ref("");
-    return {
-      input24,
-    };
+    return {};
   },
   methods: {
     getInfoVideo(videoId) {
